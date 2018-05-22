@@ -42,11 +42,13 @@ while true {
 // NOTE:
 
 //Create variables for later use
-var word = "tour"
+
 var translatedWord = ""
 
 // Example of how to collect multiple input lines
 for counter in 1...expectedCountOfWordsToTranslate {
+    var word = "tour"
+
     
     // Get each word
     print("Enter word #\(counter):")
@@ -70,7 +72,7 @@ for counter in 1...expectedCountOfWordsToTranslate {
     //If is is not an American word, print the result
     if isAmerican == false{
         print("The translation is \(word)")
-    }else if word.count < 4 { //If the word has less than 4 letters, print the result
+    }else if word.count <= 4 { //If the word has less than 4 letters, print the result
         print("The translation is \(word)")
     }else if isAmerican == true { // If the word is an American word, translate it
         //Reverse the word
